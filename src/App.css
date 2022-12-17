@@ -6,7 +6,266 @@
   height: 40vmin;
   pointer-events: none;
 }
+nav{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#logo{
+  height: 54px;
+  width: 156px;
+}
+#logo img{
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
+}
+#searchBar{
+  position: relative;
+}
+#searchBar img{
+  position: absolute;
+    height: 16px;
+    top: 10px;
+    left: 13px;
+}
+#searchBar input{
+  width: 180px;
+  height: 36px;
+  padding: 10px 42px 11px 34px;
+  box-sizing: border-box;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
 
+#home{
+  width: 80%;
+  margin: auto;
+}
+#fade{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 5;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+#modal{
+  width: 583px;
+  height: 474px;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 24px;
+  box-sizing: border-box;
+}
+#modal section{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  bottom: 10px;
+}
+#modal #partition{
+  display: flex;
+  justify-content: space-between;
+}
+#modal #left{
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+}
+#modal #name{
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+  text-align: left;
+}
+#modal img{
+  width: 100%;
+  height: 389px;
+  object-fit: cover;
+}
+#modal #right{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+#modal #cross{
+  Width:24px;
+  Height:24px;
+  border:1px solid black;
+  cursor: pointer;
+}
+#cross img{
+  height: 10px;
+}
+#modal #date{
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 24px;
+letter-spacing: -0.01em;
+color: #000000;
+}
+#modal #para{
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+letter-spacing: -0.01em;
+
+color: #000000;
+}
+#modal #rating{
+  font-family: 'Inter';
+font-style: normal;
+font-size: 14px;
+line-height: 24px;
+}
+
+#line{
+  height: 1px;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: nullpx;
+  background-color: rgba(192, 196, 204, 1);
+
+}
+#title{
+  margin-top: 25px;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+  text-align: left;
+
+}
+#moviesBox{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+#cardOuter{
+  display: flex;
+  width: 23%;
+}
+#card{
+  height: 348px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  border: 1px solid rgba(225, 227, 230, 1);
+  box-shadow: 1px 2px 8px 2px rgba(0, 0, 0, 0.1);
+  margin: 20px 0px;
+  border-radius: 7px;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+#ratingCard{
+  position: absolute;
+  height: 34px;
+  width: 34px;
+  left: 15px;
+  top: 15px;
+  border-radius: 100%;
+  font-family: Inter;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(0, 0, 0, 1);
+
+}
+#cardImage{
+  width: 100%;
+  max-height: 90%;
+  height:85%;
+  object-fit: cover;
+  border-radius: 7px 7px 0px 0px;
+}
+#cardName{
+font-family: Inter;
+font-size: 16px;
+font-weight: 400;
+text-align: center;
+letter-spacing: -0.01em;
+height: 44px;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 0px 10px;
+}
+
+@media (max-width:1000px) {
+  #cardOuter{
+    width: 31%;
+  }
+}
+@media (max-width:650px) {
+  #cardOuter{
+    width: 48%;
+  }
+  #modal{
+    width: 90%;
+    height: 400px;
+  }
+  #modal img{
+    height: 314px;
+  }
+  #cross img{
+    height: 10px;
+  }
+}
+@media (max-width:500px) {
+  #card{
+    height: 280px;
+  }
+  #logo {
+    height: 33px;
+    width: 96px;
+  }
+  #searchBar input {
+    width: 121px;
+    height: 36px;
+    padding: 10px 15px 11px 23px;
+}
+#searchBar img {
+  height: 12px;
+  top: 12px;
+  left: 8px;
+}
+}
+
+@media (max-width:370px) {
+  #cardOuter{
+    width: 100%;
+  }
+  #card{
+    height: 350px;
+  }
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
